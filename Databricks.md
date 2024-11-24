@@ -25,4 +25,11 @@ JDBC?
 2. Workspace : To manage and share all the resources
 3. Compute : 
 4. Repos : 
-5. Jobs : Run perticular job
+5. Jobs : Run perticular job on time.
+
+
+>> In notebook we can use %% magic cell to write code in another language. 
+
+
+## Apache Spark Core Concepts
+
