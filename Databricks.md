@@ -33,3 +33,43 @@ JDBC?
 
 ## Apache Spark Core Concepts
 
+### Pyspark RDD **DAG**
+
+![alt text](image-2.png)
+
+Spark can accessed by creating RDD's.
+
+But In daytoday life we access it using DataFrame (Python or Scala).
+
+>>Transformation vs Action
+
+Transformation we write logic 
+
+Action : Actual execution of that logic and show resulted output.
+
+>>Wide vs Narrow Transformation
+
+Map > each element get map to one key No Shuffling
+
+Groupby > 1 to n > Wide transformation **involves shuffle**
+
+![alt text](image-3.png)
+
+
+## Databricks Cluster Creation and Configuration?
+
+>>DBFS: Databricks file System
+
+>>Try not to store anything in DBFS itself
+
+>>Mount storage account adls 
+
+>>Connect to Database >> JDBC
+
+* JDBC (Java Database Connectivity) is an API in Java that enables developers to interact with a database. <br>
+<br>
+* It is part of Java's standard library and provides a standardized way to perform database operations such as querying, updating, and managing relational databases.
+
+>> Delta table
+
+>> Managed vs Unmanaged tables in databricks
