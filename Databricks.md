@@ -68,8 +68,17 @@ Groupby > 1 to n > Wide transformation **involves shuffle**
 
 * JDBC (Java Database Connectivity) is an API in Java that enables developers to interact with a database. <br>
 <br>
+
 * It is part of Java's standard library and provides a standardized way to perform database operations such as querying, updating, and managing relational databases.
 
 >> Delta table
 
 >> Managed vs Unmanaged tables in databricks
+
+>>Vaccum command : to clear older file without reference
+
+>> Merge 2 tables in >>
+
+>> parquet to delta table
+
+![alt text](test.png)
