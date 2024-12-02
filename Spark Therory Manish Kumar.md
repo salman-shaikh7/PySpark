@@ -10,4 +10,4 @@
 *   *Misconception* -> Hadoop don't process in RAM.
 
 
-<span style="background-color:lightblue">This text is highlighted.</span>
+<span style="background-color:red">This text is highlighted.</span>
