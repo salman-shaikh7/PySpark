@@ -31,11 +31,43 @@ It reads from RAM and write in RAM where as Hadoop Read and write on Disk ROM.
 
 >> ### Spark Architecture
 
+<br>
+<br>
+
 ![alt text](Spark%20Architecture.png)
 
+<br>
+
+![alt text](/Resource-cluster%20Manager.png)
 
 
-reference 
+
+
+
+>> ### How it works ?
+
+*  Cluster-10 -> 1 : Master Node + 9 : Worker Node
+
+*  Developer will submit code to RM.
+with details like
+    1.  Driver : 20GB
+    2.  excecutor -25 GB and 5 core.
+    3.  Number of executor - 5
+
+
+* *We should not use UDF (Code in pure python), because it will require Python worker to execute and can slow down process.*
+
+
+*   The **RM** is responsible for managing the cluster resources. (CPU, memory). e.g YARN, Kubernetes.
+
+*   The **Driver** is the main process that runs your Spark application. It is responsible for coordinating the job’s execution and managing the job’s overall lifecycle.
+
+* Each **Executor** is responsible for reading data, performing computations, and storing the results for the tasks assigned to it.
+
+* If the data is stored externally (e.g., in HDFS, S3, or a database), Executor 1 will directly read the data from the source as per the instructions it received from the Driver. 
+
+
+
 
 
 
