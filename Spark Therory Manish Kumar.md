@@ -8,3 +8,6 @@
 *   Hadoop is NOT database.
 *   Spark is NOT 100X faster but **upto**.
 *   *Misconception* -> Hadoop don't process in RAM.
+
+
+<span style="background-color:lightblue">This text is highlighted.</span>
