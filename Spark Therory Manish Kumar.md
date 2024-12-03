@@ -66,9 +66,33 @@ with details like
 
 * If the data is stored externally (e.g., in HDFS, S3, or a database), Executor 1 will directly read the data from the source as per the instructions it received from the Driver. 
 
+>> ### Transformation and Action in spark
+
+*   Transformation : we write logic. e.g change name of column, groupby map filter.
+
+*   Action : Actual execution of that logic and show resulted output. e.g count, show, collect.
+
+*   When an action is triggered in Spark, it may cause some or all of the data to be transferred back to the Driver. 
+
+*   If our driver don't have that much memory then 
+**driver memory out exception**.
+
+>> ### Wide dependency vs Narrow dependency Transformation
+
+*   Map,filter > each element get map to one key No Shuffling
+
+*   Groupby > 1 to n > Wide transformation involves shuffle which means moving data from 1 partition to another and vice versa.
 
 
+![alt text](image-4.png)
 
+
+>> ### DAG and Lazy Evaluation in spark
+
+* If we hit any action spark will create a Job.
+* If we excecute transformation it will not create a Job which is called lazy evaluation.
+
+*  Spark builds a DAG of stages representing the sequence of transformations that need to be applied to the data. 
 
 
 
