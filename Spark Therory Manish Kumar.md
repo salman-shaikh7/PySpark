@@ -91,8 +91,44 @@ with details like
 
 * If we hit any action spark will create a Job.
 * If we excecute transformation it will not create a Job which is called lazy evaluation.
-
 *  Spark builds a DAG of stages representing the sequence of transformations that need to be applied to the data. 
+
+
+>> ### Spark SQL Engine (catalyst optimizer)
+
+*   Structured API executation.
+
+*   Code in DataframeAPI or SQL ->>> SPARK SQL Enginer ->>> RDD's (Javabyte code).
+
+    >> 4 Phases SPARK SQL ENGINE/Catalyst Optimizer 
+    
+    1.  Analysis :
+
+    2.  Logical Planning/optimization : optimize/reduce data to read by analyzing all transformation.
+
+    3.  Physical Planning : 
+
+    4.  Code Generation
+
+*   Catalog : Metadata storage for our data.
+*   Analysis Exception error : When Spark is unable to read file from catalog. I.e File is not present.
+
+
+>> ### RDD 
+
+Data will be distributed across cluster/ each excecuter.
+
+Resilient : In case failure it will know how to recover.
+
+RDD's are immutable.
+
+RDD_01 ->> RDD_02 ->> RDD_03
+
+All these steps stored in DAG.
+
+If Spark loses RDD_03 it knows via DAG how to recover it.
+
+
 
 
 
