@@ -128,6 +128,8 @@ All these steps stored in DAG.
 
 If Spark loses RDD_03 it knows via DAG how to recover it.
 
+>> ### Spark session vs Spark Context.
+
 
 
 
